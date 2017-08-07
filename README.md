@@ -12,7 +12,7 @@
 * Create a dir for your tmp databases `mkdir ./tmp_dbs`
 * Create your config file with the name "config.ini" and the following format
 
-[dbs]
+```[dbs]
 db_path = The path to your main database
 tmp_db_path = The path to your tmp DB dir. This should not have a trailing / and should be empty of anything but your temporary databases
 
@@ -20,7 +20,7 @@ tmp_db_path = The path to your tmp DB dir. This should not have a trailing / and
 username = Your username
 client_id = Your client ID
 client_secret = Your client secret
-user_agent = Your user_agent
+user_agent = Your user_agent```
 
 There is an example config file in this repo
 
