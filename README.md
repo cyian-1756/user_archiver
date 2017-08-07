@@ -31,7 +31,7 @@ the author, subreddit, link_title, created and score columns
 
 # Tools
 
-There are several tools in this repo for maintaining anf retrieving infomation from your database
+There are several tools in this repo for maintaining and retrieving information from your database
 
 * dedupe_db.py will remove duplicate entries from your database
 * dump_usernames.py will print every username in your database
