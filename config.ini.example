@@ -1,0 +1,9 @@
+[dbs]
+db_path = /path/to/main/database
+tmp_db_path = /path/to/tmp_dbs
+
+[creds_1]
+username = username
+client_id = ID
+client_secret = secret
+user_agent = user_agent
