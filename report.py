@@ -114,7 +114,7 @@ def total_recorded_comments(cursor, username):
 
 
 
-db = sqlite3.connect(args.db)
+db = sqlite3.connect(config["dbs"]["db_path"])
 cursor = db.cursor()
 
 username = args.u
