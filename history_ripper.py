@@ -40,13 +40,15 @@ with open(args.u) as f:
     usernames = f.read().splitlines()
 if not os.path.isfile("{0}/{1}.db".format(config["dbs"]["tmp_db_path"], temp_file_name)):
     print("[*] Making database {}.db".format(temp_file_name))
-    os.system("touch {}/{}.db".format(config["dbs"]["tmp_db_path"], temp_file_name))
-    os.system("sqlite3 {}/{}.db < make_database.sql".format(config["dbs"]["tmp_db_path"], temp_file_name))
+    conn = sqlite3.connect("{}/{}.db".format(config["dbs"]["tmp_db_path"], temp_file_name))
+    make_db = open("make_database.sql", "r").read()
+    conn.execute(make_db)
     print("[*] Database made")
 conn = sqlite3.connect("{}/{}.db".format(config["dbs"]["tmp_db_path"], temp_file_name))
 cursor = conn.cursor()
 
-x=1
+# This x is here for our current user count
+x = 1
 for username in usernames:
     try:
         user = r.redditor(username)
