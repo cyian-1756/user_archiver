@@ -44,7 +44,8 @@ if not os.path.isfile("{0}/{1}.db".format(config["dbs"]["tmp_db_path"], temp_fil
     make_db = open("make_database.sql", "r").read()
     conn.execute(make_db)
     print("[*] Database made")
-conn = sqlite3.connect("{}/{}.db".format(config["dbs"]["tmp_db_path"], temp_file_name))
+else:
+    conn = sqlite3.connect("{}/{}.db".format(config["dbs"]["tmp_db_path"], temp_file_name))
 cursor = conn.cursor()
 
 # This x is here for our current user count
